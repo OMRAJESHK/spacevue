@@ -7,6 +7,7 @@ const initialState = {
   isFailed: false,
   isSucces: false,
   missions: [],
+  updatedMissions: [],
 };
 
 export const getMissions = createAsyncThunk("mission/missionlist", async () => {
@@ -17,7 +18,15 @@ export const getMissions = createAsyncThunk("mission/missionlist", async () => {
 export const missionsSlice = createSlice({
   name: "missionState",
   initialState,
-  reducers: {},
+  reducers: {
+    getMissionsByYear: (state, action) => {
+      const { year } = action.payload;
+      let updatedMissionList = state.missions.filter((mission) =>
+        mission.date.includes(year)
+      );
+      state.updatedMissions = updatedMissionList;
+    },
+  },
   extraReducers: (builder) => {
     builder
       .addCase(getMissions.pending, (state) => {
@@ -42,5 +51,7 @@ export const missionsSlice = createSlice({
       });
   },
 });
+
+export const { getMissionsByYear } = missionsSlice.actions;
 
 export default missionsSlice.reducer;

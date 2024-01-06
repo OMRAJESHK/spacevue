@@ -1,0 +1,7 @@
+.dashboard-wrapper{
+  text-align: left;
+ 
+}
+.mission-status-wrapper, .company-mission-wrapper{
+  flex-basis: 49%
+}

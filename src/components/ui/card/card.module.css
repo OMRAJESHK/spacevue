@@ -1,0 +1,23 @@
+.basic-card {
+  width: 300px;
+  position: relative;
+
+  -webkit-box-shadow:  var(--shadow);
+  -moz-box-shadow:  var(--shadow);
+  -o-box-shadow:  var(--shadow);
+  box-shadow: var(--shadow);
+}
+
+.basic-card .card-content {
+  padding: 30px;
+}
+
+.basic-card .card-heading {
+  font-size: 25px;
+  font-family: "Open Sans", sans-serif;
+}
+
+.basic-card .card-body {
+  margin-top: 1rem;
+  line-height: 1.6;
+}
