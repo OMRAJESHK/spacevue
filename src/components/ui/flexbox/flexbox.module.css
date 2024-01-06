@@ -1,0 +1,24 @@
+.flex {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+@media (min-width: 320px) {
+}
+@media (min-width: 481px) {
+}
+@media (min-width: 641px) {
+}
+@media (min-width: 961px) {
+}
+@media (min-width: 1025px) {
+  .flex {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
+}
+@media (min-width: 1281px) {
+}
